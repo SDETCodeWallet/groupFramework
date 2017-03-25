@@ -1,5 +1,5 @@
 package genricFunctions;
 
-public class javaScriptUtils {
+public class JavaScriptUtils {
 
 }
