@@ -5,9 +5,10 @@
   <version>0.0.1-SNAPSHOT</version>
  <dependencies> 
  <dependency>
+    
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>3.0.1</version>
+    <version>3.3.1</version>
 </dependency>
 
 <dependency>
@@ -52,6 +53,24 @@
     <version>3.15</version>
 </dependency>
 </dependencies>
+
+<reporting>
+    <plugins>
+    <!-- TestNG-xslt related configuration. -->
+      <plugin>
+        <groupId>org.reportyng</groupId>
+        <artifactId>reporty-ng</artifactId>
+        <version>1.2</version>
+        <configuration>
+          <!-- Output directory for the testng xslt report -->
+          <outputDir>/target/testng-xslt-report</outputDir>
+          <sortTestCaseLinks>true</sortTestCaseLinks>
+          <testDetailsFilter>FAIL,SKIP,PASS,CONF,BY_CLASS</testDetailsFilter>
+          <showRuntimeTotals>true</showRuntimeTotals>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
 
 
 </project>
