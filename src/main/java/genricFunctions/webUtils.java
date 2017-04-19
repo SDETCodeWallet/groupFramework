@@ -27,6 +27,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -39,7 +40,7 @@ public class webUtils {
 	public static WebDriver launchbrowser(String Browsername, String url) {
 		if (Browsername.equalsIgnoreCase("ff")) {
 			System.setProperty("webdriver.gecko.driver", "Drivers/geckodriverfirefox.exe");
-			WebDriver driver = new FirefoxDriver();
+			driver = new FirefoxDriver();
 		} else if (Browsername.equalsIgnoreCase("ch")) {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 			driver = new ChromeDriver();
@@ -106,7 +107,7 @@ public class webUtils {
 		System.out.println(text);
 	}
 
-	public static void checkAllLinks(List<WebElement> alllinkscollection) {
+	public static void getTextOfAllLinks(List<WebElement> alllinkscollection) {
 
 		int totallinks = alllinkscollection.size();
 		System.out.println(totallinks);
@@ -115,8 +116,27 @@ public class webUtils {
 			WebElement perlink = alllinkscollection.get(i);
 			String linkname = perlink.getText();
 			System.out.println(linkname);
+		}
+	}
+
+	public static void clickOnAllLinks(List<WebElement> alllinkscollection) {
+		int totallinks = alllinkscollection.size();
+		System.out.println(totallinks);
+
+		for (int i = 0; i <= totallinks - 1; i++) {
+			WebElement perlink = alllinkscollection.get(i);
 			perlink.click();
 			int totallinks1 = alllinkscollection.size();
+		}
+	}
+
+	public static void getUrlOfAllLinks(List<WebElement> alllinkscollection) {
+		int totallinks = alllinkscollection.size();
+		System.out.println(totallinks);
+
+		for (int i = 0; i <= totallinks - 1; i++) {
+			WebElement perlink = alllinkscollection.get(i);
+			System.out.println(perlink.getAttribute("href"));
 
 		}
 	}
@@ -262,6 +282,21 @@ public class webUtils {
 		}
 		return St1;
 
+	}
+
+	public static void selectByValue(WebElement we,String dropDwnValue){
+		Select se=new Select(we);
+		se.selectByValue(dropDwnValue);
+	}
+	
+	public static void selectByIndex(WebElement we,int dropDownIndexValue){
+		Select se=new Select(we);
+		se.selectByIndex(dropDownIndexValue);
+	}
+	
+	public static void selectByVisibleText(WebElement we,String dropDwnVisbleText){
+		Select se=new Select(we);
+		se.selectByVisibleText(dropDwnVisbleText);
 	}
 
 }

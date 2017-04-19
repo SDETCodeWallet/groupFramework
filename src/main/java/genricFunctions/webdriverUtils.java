@@ -2,12 +2,15 @@ package genricFunctions;
 
 import org.openqa.selenium.WebDriver.Options;
 
-public class webdriver extends webUtils {
+public class webdriverUtils extends webUtils {
 
+	public static void closeDriver(){
+		driver.close();
+	}
 	
-
-
-
+	public static void quitDriver(){
+		driver.quit();
+	}
 	public static void deleteAllCookies() {
 		driver.manage().deleteAllCookies();
 	}

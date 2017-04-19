@@ -7,6 +7,7 @@
       <class name="TeaApplicationTestPackage.HomePage">
         <methods>
           <include name="launchapp"/>
+          <include name="launchapp"/>
           <include name="tc1"/>
         </methods>
       </class> <!-- TeaApplicationTestPackage.HomePage -->

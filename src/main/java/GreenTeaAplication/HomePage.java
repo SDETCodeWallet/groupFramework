@@ -1,14 +1,25 @@
 package GreenTeaAplication;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import genricFunctions.webUtils;
 
 public class HomePage extends webUtils {
 
-	@FindBy(xpath = "")
-	private WebElement ourpassion;
+	@FindBy(xpath = "//a")
+	private static List<WebElement> homePageAllLinks;
+
+	public static void checkAllLinks() {
+		webUtils.getTextOfAllLinks(homePageAllLinks);
+	}
+
+	public static void getURLOfAllLinks() {
+		webUtils.getUrlOfAllLinks(homePageAllLinks);
+	}
 
 	public static void fn_WelcomePage() {
 
@@ -26,7 +37,9 @@ public class HomePage extends webUtils {
 
 	}
 
-	public static void fn_NavigateToCheckoutPage() {
+	public static CheckOut fn_NavigateToCheckoutPage() {
 
+		CheckOut chckOut=PageFactory.initElements(driver, CheckOut.class);
+		return chckOut;
 	}
 }

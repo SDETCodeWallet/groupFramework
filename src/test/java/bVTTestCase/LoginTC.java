@@ -13,8 +13,7 @@ public class LoginTC extends webUtils {
 
 	@BeforeTest
 	public static void lunchbrowser() {
-		webUtils.launchbrowser("CH", "http://automationpractice.com/index.php");
-
+		webUtils.launchbrowser("ff", "http://automationpractice.com/index.php");
 	}
 
 	@Test
