@@ -33,47 +33,26 @@ import org.testng.Assert;
 
 public class webUtils {
 
-	public static WebDriver driver = null;
-<<<<<<< HEAD
-=======
-	
->>>>>>> e1400df79f73f46cb136755a0247930eb1970dfe
+	public static WebDriver driver;
 
 	/* browser methods */
-	public static WebDriver launchbrowser(String Browsername, String browsername) {
+	public static WebDriver launchbrowser(String Browsername, String url) {
 		if (Browsername.equalsIgnoreCase("ff")) {
-<<<<<<< HEAD
 			System.setProperty("webdriver.gecko.driver", "Drivers/geckodriverfirefox.exe");
 			WebDriver driver = new FirefoxDriver();
 		} else if (Browsername.equalsIgnoreCase("ch")) {
-			System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
-=======
-			System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-			driver = new FirefoxDriver();
-		} else if (Browsername.equalsIgnoreCase("ch")) {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
->>>>>>> e1400df79f73f46cb136755a0247930eb1970dfe
 			driver = new ChromeDriver();
-
-		} else if (Browsername.equalsIgnoreCase("IE")) {
-			System.out.println("inside method");
-<<<<<<< HEAD
+		} else if (Browsername.equalsIgnoreCase("iE")) {
 			System.setProperty("webdriver.ie.driver", "Drivers/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
-		} else if (Browsername.equalsIgnoreCase("IEE")) {
-			System.out.println("inside method");
+		} else if (Browsername.equalsIgnoreCase("ed")) {
 			System.setProperty("webdriver.edge.driver", "Drivers/MicrosoftWebDriver.exe");
-=======
-			System.setProperty("webdriver.ie.driver", "drivers/IEDriverServer.exe");
-			driver = new InternetExplorerDriver();
-		} else if (Browsername.equalsIgnoreCase("IEE")) {
-			System.out.println("inside method");
-			System.setProperty("webdriver.edge.driver", "drivers/MicrosoftWebDriver.exe");
->>>>>>> e1400df79f73f46cb136755a0247930eb1970dfe
 			driver = new EdgeDriver();
+
 		}
 
-		driver.get(browsername);
+		driver.get(url);
 		return driver;
 
 	}
@@ -81,12 +60,7 @@ public class webUtils {
 	public static WebDriver launchbrowserforgrid(String Gridbrowsername, Platform pl, String browsername) {
 
 		System.setProperty("webdriver.gecko.driver",
-<<<<<<< HEAD
 				"C:////Users////Deepak////workspace////Training_PoaDevEnv////Software////geckodriver.exe");
-=======
-				"C:\\Users\\Deepak\\workspace\\Training_PoaDevEnv\\Software\\geckodriver.exe");
->>>>>>> e1400df79f73f46cb136755a0247930eb1970dfe
-
 		DesiredCapabilities cap = DesiredCapabilities.firefox();
 		cap.setBrowserName(Gridbrowsername);
 		cap.setPlatform(pl);
@@ -252,7 +226,6 @@ public class webUtils {
 	/* navigation methods */
 	public static void refreshPage() {
 		driver.navigate().refresh();
-<<<<<<< HEAD
 	}
 
 	public static void navigateUrl(String St1) {
@@ -291,19 +264,4 @@ public class webUtils {
 
 	}
 
-=======
-	}
-
-	public static void navigateUrl(String St1) {
-		driver.navigate().to(St1);
-	}
-
-	public static void navigateForward() {
-		driver.navigate().forward();
-	}
-
-	public static void navigateBack() {
-		driver.navigate().back();
-	}
->>>>>>> e1400df79f73f46cb136755a0247930eb1970dfe
 }
