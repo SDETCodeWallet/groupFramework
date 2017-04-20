@@ -5,8 +5,7 @@
     <classes>
       <class name="TeaApplicationTestPackage.TestCase1">
         <methods>
-          <include name="tc2"/>
-          <include name="tc1"/>
+          <include name="tc3"/>
           <include name="launchapp"/>
         </methods>
       </class> <!-- TeaApplicationTestPackage.TestCase1 -->

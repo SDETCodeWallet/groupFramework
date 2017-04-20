@@ -14,7 +14,7 @@ public class HomePage {
 
 	@FindBy(xpath = ".//*[@id='header']/div[2]/div/div/nav/div[1]/a")
 	private static WebElement userSignBtn;
-	
+
 	@FindBy(xpath = ".//*[@id='email_create']")
 	private static WebElement newUserMail;
 
@@ -25,14 +25,14 @@ public class HomePage {
 	}
 
 	public static loginPage fn_signIn() {
-		webUtils.clickOnElement(userSignBtn);
+		webUtils.clickOnWebelement(userSignBtn);
 		loginPage sgnIn_lgInpage = PageFactory.initElements(driver, loginPage.class);
 		return sgnIn_lgInpage;
 
 	}
-	
-	public static loginPage fn_singup(){
-		webUtils.clickOnElement(userSignBtn);
+
+	public static loginPage fn_singup() {
+		webUtils.clickOnWebelement(userSignBtn);
 		loginPage sgnIn_lgInpage = PageFactory.initElements(driver, loginPage.class);
 		return sgnIn_lgInpage;
 	}

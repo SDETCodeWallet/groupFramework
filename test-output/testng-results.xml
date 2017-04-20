@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="2" total="6" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32279" started-at="2017-04-19T16:34:36Z" finished-at="2017-04-19T16:35:09Z">
+  <suite name="Default suite" duration-ms="62739" started-at="2017-04-20T15:27:49Z" finished-at="2017-04-20T15:28:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="32279" started-at="2017-04-19T16:34:36Z" finished-at="2017-04-19T16:35:09Z">
+    <test name="Default test" duration-ms="62739" started-at="2017-04-20T15:27:49Z" finished-at="2017-04-20T15:28:52Z">
       <class name="TeaApplicationTestPackage.TestCase1">
-        <test-method status="PASS" signature="launchapp(java.lang.String)[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="launchapp" is-config="true" duration-ms="20408" started-at="2017-04-19T22:04:36Z" finished-at="2017-04-19T22:04:57Z">
+        <test-method status="PASS" signature="launchapp(java.lang.String)[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="launchapp" is-config="true" duration-ms="16959" started-at="2017-04-20T20:57:49Z" finished-at="2017-04-20T20:58:06Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -16,15 +16,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchapp -->
-        <test-method status="PASS" signature="tc1()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="tc1" duration-ms="1547" started-at="2017-04-19T22:04:57Z" finished-at="2017-04-19T22:04:58Z">
+        <test-method status="PASS" signature="tc3()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="tc3" duration-ms="4021" started-at="2017-04-20T20:58:06Z" finished-at="2017-04-20T20:58:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tc1 -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="closeApp" is-config="true" duration-ms="1083" started-at="2017-04-19T22:04:58Z" finished-at="2017-04-19T22:04:59Z">
+        </test-method> <!-- tc3 -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="closeApp" is-config="true" duration-ms="509" started-at="2017-04-20T20:58:10Z" finished-at="2017-04-20T20:58:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-        <test-method status="PASS" signature="launchapp(java.lang.String)[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="launchapp" is-config="true" duration-ms="8478" started-at="2017-04-19T22:04:59Z" finished-at="2017-04-19T22:05:08Z">
+        <test-method status="PASS" signature="launchapp(java.lang.String)[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="launchapp" is-config="true" duration-ms="10617" started-at="2017-04-20T20:58:10Z" finished-at="2017-04-20T20:58:21Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -33,11 +33,45 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchapp -->
-        <test-method status="PASS" signature="tc2()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="tc2" duration-ms="713" started-at="2017-04-19T22:05:08Z" finished-at="2017-04-19T22:05:09Z">
+        <test-method status="PASS" signature="tc4()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="tc4" duration-ms="3750" started-at="2017-04-20T20:58:21Z" finished-at="2017-04-20T20:58:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tc2 -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="closeApp" is-config="true" duration-ms="15" started-at="2017-04-19T22:05:09Z" finished-at="2017-04-19T22:05:09Z">
+        </test-method> <!-- tc4 -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="closeApp" is-config="true" duration-ms="264" started-at="2017-04-20T20:58:25Z" finished-at="2017-04-20T20:58:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method status="PASS" signature="launchapp(java.lang.String)[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="launchapp" is-config="true" duration-ms="14839" started-at="2017-04-20T20:58:25Z" finished-at="2017-04-20T20:58:40Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method status="PASS" signature="tc5()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="tc5" duration-ms="4278" started-at="2017-04-20T20:58:40Z" finished-at="2017-04-20T20:58:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc5 -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="closeApp" is-config="true" duration-ms="199" started-at="2017-04-20T20:58:44Z" finished-at="2017-04-20T20:58:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method status="PASS" signature="launchapp(java.lang.String)[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="launchapp" is-config="true" duration-ms="6480" started-at="2017-04-20T20:58:44Z" finished-at="2017-04-20T20:58:51Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method status="PASS" signature="tc6()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="tc6" duration-ms="624" started-at="2017-04-20T20:58:51Z" finished-at="2017-04-20T20:58:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc6 -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="closeApp" is-config="true" duration-ms="162" started-at="2017-04-20T20:58:52Z" finished-at="2017-04-20T20:58:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->

@@ -30,12 +30,12 @@ public class loginPage extends webUtils{
 		System.out.println("inside login  func");
       webUtils.inputValue(loginEmail, "test@gmail.comtest");
       webUtils.inputValue(userPassword, "123456789");
-      webUtils.clickOnElement(lognBtn);
+      webUtils.clickOnWebelement(lognBtn);
 	}
 	
 	public static SignUpPage fn_signup(){
 		webUtils.inputValue(newusermail, "testtng@gmail.com");
-		webUtils.clickOnElement(createNewUserBtn);
+		webUtils.clickOnWebelement(createNewUserBtn);
 		SignUpPage sgnup=PageFactory.initElements(driver, SignUpPage.class);
 		return sgnup;
 	}

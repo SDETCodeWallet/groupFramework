@@ -7,28 +7,28 @@ import genricFunctions.webUtils;
 
 public class CheckOut {
 
-	@FindBy(css = "css=input#email")
+	@FindBy(css = "input#email")
 	private WebElement userEmail;
 
-	@FindBy(css = "css=input#name")
+	@FindBy(css = "input#name")
 	private WebElement userName;
 
-	@FindBy(css = "css=textarea#address")
+	@FindBy(css = "textarea#address")
 	private WebElement userAddress;
 
-	@FindBy(css = "css=select#card_type")
+	@FindBy(css = "select#card_type")
 	private WebElement paymentCardType;
 
-	@FindBy(css = "css=input#card_number")
+	@FindBy(css = "input#card_number")
 	private WebElement userCardNumber;
 
-	@FindBy(css = "css=input#cardholder_name")
+	@FindBy(css = "input#cardholder_name")
 	private WebElement cardHolderName;
 
-	@FindBy(css = "css=input#verification_code")
+	@FindBy(css = "input#verification_code")
 	private WebElement verificationCode;
 
-	@FindBy(css = "css=a.btn")
+	@FindBy(css = "a.btn")
 	private WebElement cancelButton;
 
 	@FindBy(xpath = "//button[contains(@class, 'btn btn-primary')]")
@@ -39,19 +39,19 @@ public class CheckOut {
 	}
 
 	public void userName(String uName) {
-		webUtils.inputValue(userEmail, uName);
+		webUtils.inputValue(userName, uName);
 	}
 
 	public void userAdd(String adds) {
-		webUtils.inputValue(userEmail, adds);
+		webUtils.inputValue(userAddress, adds);
 	}
 
-	public void cardType(String adds) {
-		webUtils.selectByIndex(paymentCardType, 1);
+	public void cardType(int indexnum) {
+		webUtils.selectByIndex(paymentCardType, indexnum);
 	}
 
-	public void cardNumber(String cardNumber) {
-		webUtils.inputValue(userCardNumber, cardNumber);
+	public void cardNumber(int cardNumber) {
+		webUtils.inputnumericvalue(userCardNumber, cardNumber);
 	}
 
 	public void cardHolderName(String cardName) {
@@ -62,4 +62,11 @@ public class CheckOut {
 		webUtils.inputValue(verificationCode, verifCode);
 	}
 
+	public void cancelButton() {
+		webUtils.clickOnWebelement(cancelButton);
+	}
+
+	public void placeOrderButton() {
+		webUtils.clickOnWebelement(placeOrderButton);
+	}
 }

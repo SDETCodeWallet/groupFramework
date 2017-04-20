@@ -52,7 +52,8 @@ public class webUtils {
 			driver = new EdgeDriver();
 
 		}
-
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 		driver.get(url);
 		return driver;
 
@@ -94,12 +95,10 @@ public class webUtils {
 		we.sendKeys(Keys.F5);
 	}
 
-	public static void clickOnElement(WebElement ClickBtn) {
-		ClickBtn.click();
-	}
 
-	public static void verifyTitle(String actual, String expectedtitle) {
-		Assert.assertEquals(actual, expectedtitle);
+	public static void verifyTitle(String expectedtitle) {
+		String actualTitle=driver.getTitle();
+		Assert.assertEquals(actualTitle, expectedtitle);
 	}
 
 	public static void getText(WebElement we) {
@@ -298,5 +297,6 @@ public class webUtils {
 		Select se=new Select(we);
 		se.selectByVisibleText(dropDwnVisbleText);
 	}
+	
 
 }
