@@ -27,11 +27,11 @@ public class TestCase1 extends webUtils {
 	@Parameters("browser")
 	@BeforeMethod
 	public void launchapp(@Optional String browser) {
-		webUtils.launchbrowser(webUtils.getValue("cbrowser"), webUtils.getValue("url"));
+		webUtils.launchbrowser(webUtils.getValue("src//main//resources//testData//Teadatafile.properties","cbrowser"), webUtils.getValue("src//main//resources//testData//Teadatafile.properties","url"));
 		hm = PageFactory.initElements(driver, HomePage.class);
 		webUtils.verifyTitle("Welcome");
 	}
-	
+
 	@Test(enabled = false)
 	public void tc1() {
 		hm.checkAllLinks();
@@ -74,8 +74,7 @@ public class TestCase1 extends webUtils {
 
 	@Test(enabled = false)
 	public void gridlaunchapp() {
-		webdriverUtils.remoteWebDriver("ff", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe",
-				"http://192.168.14.65:7777/wd/hub", "testing");
+		webdriverUtils.remoteWebDriver("ff", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe","http://192.168.14.65:7777/wd/hub", "testing");
 	}
 
 	@AfterMethod(enabled = false)
@@ -83,6 +82,8 @@ public class TestCase1 extends webUtils {
 		webdriverUtils.closeDriver();
 
 	}
+	
+	
 
 	// public static void main(String[] args) throws MalformedURLException{
 	// DesiredCapabilities cap=DesiredCapabilities.firefox();

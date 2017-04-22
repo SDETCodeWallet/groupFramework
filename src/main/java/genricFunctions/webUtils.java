@@ -52,8 +52,8 @@ public class webUtils {
 			driver = new EdgeDriver();
 
 		}
-//        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+//		driver.manage().window().maximize();
+//		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 		driver.get(url);
 		return driver;
 
@@ -95,9 +95,8 @@ public class webUtils {
 		we.sendKeys(Keys.F5);
 	}
 
-
 	public static void verifyTitle(String expectedtitle) {
-		String actualTitle=driver.getTitle();
+		String actualTitle = driver.getTitle();
 		Assert.assertEquals(actualTitle, expectedtitle);
 	}
 
@@ -259,9 +258,9 @@ public class webUtils {
 		driver.navigate().back();
 	}
 
-	public static String getValue(String propertyValue) {
+	public static String getValue(String propFilePath, String propertyValue) {
 		String St1 = null;
-		File fPath = new File("src//main//resources//testData//Teadatafile.properties");
+		File fPath = new File(propFilePath);
 
 		FileInputStream fileinputstream = null;
 
@@ -283,20 +282,19 @@ public class webUtils {
 
 	}
 
-	public static void selectByValue(WebElement we,String dropDwnValue){
-		Select se=new Select(we);
+	public static void selectByValue(WebElement we, String dropDwnValue) {
+		Select se = new Select(we);
 		se.selectByValue(dropDwnValue);
 	}
-	
-	public static void selectByIndex(WebElement we,int dropDownIndexValue){
-		Select se=new Select(we);
+
+	public static void selectByIndex(WebElement we, int dropDownIndexValue) {
+		Select se = new Select(we);
 		se.selectByIndex(dropDownIndexValue);
 	}
-	
-	public static void selectByVisibleText(WebElement we,String dropDwnVisbleText){
-		Select se=new Select(we);
+
+	public static void selectByVisibleText(WebElement we, String dropDwnVisbleText) {
+		Select se = new Select(we);
 		se.selectByVisibleText(dropDwnVisbleText);
 	}
-	
 
 }
