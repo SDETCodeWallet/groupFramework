@@ -1,14 +1,18 @@
 package TeaApplicationTestPackage;
 
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import GreenTeaAplication.CheckOut;
 import GreenTeaAplication.HomePage;
 import GreenTeaAplication.LetsTalkTea;
@@ -27,7 +31,7 @@ public class TestCase1 extends webUtils {
 		hm = PageFactory.initElements(driver, HomePage.class);
 		webUtils.verifyTitle("Welcome");
 	}
-
+	
 	@Test(enabled = false)
 	public void tc1() {
 		hm.checkAllLinks();
@@ -38,7 +42,7 @@ public class TestCase1 extends webUtils {
 		hm.getURLOfAllLinks();
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void tc3() {
 		CheckOut chkOut = HomePage.fn_NavigateToCheckoutPage();
 		chkOut.userEmail("testmail@gmail.com");
@@ -53,24 +57,39 @@ public class TestCase1 extends webUtils {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void tc4() {
 		LetsTalkTea page = HomePage.fn_NavigateToLetsTalkPage();
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void tc5() {
 		Menu page = hm.fn_NavigateToMenuPage();
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void tc6() {
 		OurPassion Page = hm.fn_NavigateToOurPassion();
 	}
 
-	 @AfterMethod
-	 public void closeApp(){
-	 webdriverUtils.closeDriver();
-	
-	 }
+	@Test(enabled = false)
+	public void gridlaunchapp() {
+		webdriverUtils.remoteWebDriver("ff", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe",
+				"http://192.168.14.65:7777/wd/hub", "testing");
+	}
+
+	@AfterMethod(enabled = false)
+	public void closeApp() {
+		webdriverUtils.closeDriver();
+
+	}
+
+	// public static void main(String[] args) throws MalformedURLException{
+	// DesiredCapabilities cap=DesiredCapabilities.firefox();
+	// cap.setCapability(FirefoxDriver.BINARY, new File("C:\\Program Files
+	// (x86)\\Mozilla Firefox\\firefox.exe").getAbsolutePath());
+	// WebDriver driver= new RemoteWebDriver(new
+	// URL("http://192.168.14.65:7777/wd/hub"), cap);
+	// driver.get("www.google.com");
+	// }
 }

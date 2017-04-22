@@ -1,77 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="6" passed="4">
+<testng-results skipped="0" failed="1" ignored="6" total="7" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="62739" started-at="2017-04-20T15:27:49Z" finished-at="2017-04-20T15:28:52Z">
+  <suite name="Default suite" duration-ms="21868" started-at="2017-04-21T22:37:26Z" finished-at="2017-04-21T22:37:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="62739" started-at="2017-04-20T15:27:49Z" finished-at="2017-04-20T15:28:52Z">
+    <test name="Default test" duration-ms="21868" started-at="2017-04-21T22:37:26Z" finished-at="2017-04-21T22:37:48Z">
       <class name="TeaApplicationTestPackage.TestCase1">
-        <test-method status="PASS" signature="launchapp(java.lang.String)[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="launchapp" is-config="true" duration-ms="16959" started-at="2017-04-20T20:57:49Z" finished-at="2017-04-20T20:58:06Z">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-          </params>
+        <test-method status="FAIL" signature="gridlaunchapp()[pri:0, instance:TeaApplicationTestPackage.TestCase1@322d26]" name="gridlaunchapp" duration-ms="21824" started-at="2017-04-21T15:37:26Z" finished-at="2017-04-21T15:37:48Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at genricFunctions.webdriverUtils.remoteWebDriver(webdriverUtils.java:61)
+	at TeaApplicationTestPackage.TestCase1.gridlaunchapp(TestCase1.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchapp -->
-        <test-method status="PASS" signature="tc3()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="tc3" duration-ms="4021" started-at="2017-04-20T20:58:06Z" finished-at="2017-04-20T20:58:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc3 -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="closeApp" is-config="true" duration-ms="509" started-at="2017-04-20T20:58:10Z" finished-at="2017-04-20T20:58:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method status="PASS" signature="launchapp(java.lang.String)[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="launchapp" is-config="true" duration-ms="10617" started-at="2017-04-20T20:58:10Z" finished-at="2017-04-20T20:58:21Z">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchapp -->
-        <test-method status="PASS" signature="tc4()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="tc4" duration-ms="3750" started-at="2017-04-20T20:58:21Z" finished-at="2017-04-20T20:58:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc4 -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="closeApp" is-config="true" duration-ms="264" started-at="2017-04-20T20:58:25Z" finished-at="2017-04-20T20:58:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method status="PASS" signature="launchapp(java.lang.String)[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="launchapp" is-config="true" duration-ms="14839" started-at="2017-04-20T20:58:25Z" finished-at="2017-04-20T20:58:40Z">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchapp -->
-        <test-method status="PASS" signature="tc5()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="tc5" duration-ms="4278" started-at="2017-04-20T20:58:40Z" finished-at="2017-04-20T20:58:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc5 -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="closeApp" is-config="true" duration-ms="199" started-at="2017-04-20T20:58:44Z" finished-at="2017-04-20T20:58:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method status="PASS" signature="launchapp(java.lang.String)[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="launchapp" is-config="true" duration-ms="6480" started-at="2017-04-20T20:58:44Z" finished-at="2017-04-20T20:58:51Z">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchapp -->
-        <test-method status="PASS" signature="tc6()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="tc6" duration-ms="624" started-at="2017-04-20T20:58:51Z" finished-at="2017-04-20T20:58:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc6 -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:TeaApplicationTestPackage.TestCase1@55d56113]" name="closeApp" is-config="true" duration-ms="162" started-at="2017-04-20T20:58:52Z" finished-at="2017-04-20T20:58:52Z">
+        </test-method> <!-- gridlaunchapp -->
+        <test-method status="FAIL" signature="closeApp()[pri:0, instance:TeaApplicationTestPackage.TestCase1@322d26]" name="closeApp" is-config="true" duration-ms="0" started-at="2017-04-21T15:37:48Z" finished-at="2017-04-21T15:37:48Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at genricFunctions.webdriverUtils.closeDriver(webdriverUtils.java:24)
+	at TeaApplicationTestPackage.TestCase1.closeApp(TestCase1.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
